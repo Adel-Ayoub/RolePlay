@@ -17,4 +17,3 @@ private:
 	welltype _current;
 	welltype _max;
 };
-

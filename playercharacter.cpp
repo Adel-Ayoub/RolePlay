@@ -32,7 +32,7 @@ const bool PlayerCharacterDelegate::check_if_leveled() noexcept {
     static const leveltype LEVELSCALAR = 2u;
     if (_current_exp >= _exp_to_next_level) {
         _current_level++;
-        level_char_up();
+        level_up();
         _exp_to_next_level *= LEVELSCALAR;
         return true;
     }
@@ -49,6 +49,14 @@ void PlayerCharacter::cleanup_backpack() noexcept {
     );
     std::for_each(to_remove, _backpack.end(), [](Item*& i) { ItemManager::DeleteItem(i); });
     _backpack.erase(to_remove, _backpack.end());
+
+
+    const auto to_remove_ref = std::stable_partition(_backpack.begin(), _backpack.end(),
+        [](const Item* i) -> bool { return !i->GetMarkedAsBackpackRefGone(); }
+    );
+    _backpack.erase(to_remove_ref, _backpack.end());
+
+
 }
 
 PlayerCharacter::PlayerCharacter(PlayerCharacterDelegate* pc) : _player_class(pc) {
@@ -227,7 +235,7 @@ const stattype PlayerCharacter::GetTotalElementRes() const noexcept {
     }
     return _player_class->GetTotalElementRes() + resist_from_armor + elres_from_weapons;
 }
-const std::vector<Ability> PlayerCharacter::GetAbilityList() const noexcept { return _player_class->Abilities; }
+const std::vector<Ability*> PlayerCharacter::GetAbilityList() const noexcept { return _player_class->Abilities; }
 const std::vector<Buff> PlayerCharacter::GetBuffList() const noexcept { return _player_class->Buffs; }
 const std::vector<Item*> PlayerCharacter::GetBackpackList() const noexcept { return _backpack; }
 const Armor* PlayerCharacter::GetEquippedArmorAt(unsigned long long i) const noexcept {
@@ -251,6 +259,8 @@ const damagetype PlayerCharacter::MeleeAttack() const noexcept {
     // add 1/4 of str as bonus melee damage
     tmp_damage_done += damagetype(GetTotalStrength() / 4.f);
 
+    if (tmp_damage_done < 1) tmp_damage_done = 1;
+
     return tmp_damage_done;
 }
 
@@ -263,6 +273,8 @@ const damagetype PlayerCharacter::RangedAttack() const noexcept {
         tmp_damage_done = Random::NTK(equipped_weapon->MinDamage, equipped_weapon->MaxDamage);
         tmp_damage_done += damagetype(GetTotalAgility() / 4.f);  // add 1/4 of agi as bonus ranged damage
     }
+
+    if (tmp_damage_done < 1) tmp_damage_done = 1;
 
     return tmp_damage_done;
 }

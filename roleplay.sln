@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "roleplay", "roleplay.vcxproj", "{5FCBFF69-5234-4BE1-AE46-4F8F76B95F35}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "roleplayUnitTest", "..\roleplayUnitTest\roleplayUnitTest.vcxproj", "{27715017-15FB-481E-89BD-C4A596ED9B22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +21,6 @@ Global
 		{5FCBFF69-5234-4BE1-AE46-4F8F76B95F35}.Release|x64.Build.0 = Release|x64
 		{5FCBFF69-5234-4BE1-AE46-4F8F76B95F35}.Release|x86.ActiveCfg = Release|Win32
 		{5FCBFF69-5234-4BE1-AE46-4F8F76B95F35}.Release|x86.Build.0 = Release|Win32
-		{27715017-15FB-481E-89BD-C4A596ED9B22}.Debug|x64.ActiveCfg = Debug|x64
-		{27715017-15FB-481E-89BD-C4A596ED9B22}.Debug|x64.Build.0 = Debug|x64
-		{27715017-15FB-481E-89BD-C4A596ED9B22}.Debug|x86.ActiveCfg = Debug|Win32
-		{27715017-15FB-481E-89BD-C4A596ED9B22}.Debug|x86.Build.0 = Debug|Win32
-		{27715017-15FB-481E-89BD-C4A596ED9B22}.Release|x64.ActiveCfg = Release|x64
-		{27715017-15FB-481E-89BD-C4A596ED9B22}.Release|x64.Build.0 = Release|x64
-		{27715017-15FB-481E-89BD-C4A596ED9B22}.Release|x86.ActiveCfg = Release|Win32
-		{27715017-15FB-481E-89BD-C4A596ED9B22}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
