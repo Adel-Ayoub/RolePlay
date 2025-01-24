@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ch.h" />
+    <ClInclude Include="src\ch.h" />
     <ClInclude Include="include\roleplay\ability.h" />
     <ClInclude Include="include\roleplay\armor.h" />
     <ClInclude Include="include\roleplay\buff.h" />
@@ -39,28 +39,28 @@
     <ClInclude Include="include\roleplay\warrior.h" />
     <ClInclude Include="include\roleplay\weapon.h" />
     <ClInclude Include="include\roleplay\wizard.h" />
-    <ClInclude Include="pc_macros.h" />
+    <ClInclude Include="src\pc_macros.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ability.cpp" />
-    <ClCompile Include="armor.cpp" />
-    <ClCompile Include="buff.cpp" />
-    <ClCompile Include="cleric.cpp" />
-    <ClCompile Include="corestats.cpp" />
-    <ClCompile Include="item.cpp" />
-    <ClCompile Include="item_manager.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="monster.cpp" />
-    <ClCompile Include="playercharacter.cpp" />
-    <ClCompile Include="pointwell.cpp" />
-    <ClCompile Include="potion.cpp" />
-    <ClCompile Include="random.cpp" />
-    <ClCompile Include="rogue.cpp" />
-    <ClCompile Include="statblock.cpp" />
-    <ClCompile Include="types.cpp" />
-    <ClCompile Include="warrior.cpp" />
-    <ClCompile Include="weapon.cpp" />
-    <ClCompile Include="wizard.cpp" />
+    <ClCompile Include="src\ability.cpp" />
+    <ClCompile Include="src\armor.cpp" />
+    <ClCompile Include="src\buff.cpp" />
+    <ClCompile Include="src\cleric.cpp" />
+    <ClCompile Include="src\corestats.cpp" />
+    <ClCompile Include="src\item.cpp" />
+    <ClCompile Include="src\item_manager.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\monster.cpp" />
+    <ClCompile Include="src\playercharacter.cpp" />
+    <ClCompile Include="src\pointwell.cpp" />
+    <ClCompile Include="src\potion.cpp" />
+    <ClCompile Include="src\random.cpp" />
+    <ClCompile Include="src\rogue.cpp" />
+    <ClCompile Include="src\statblock.cpp" />
+    <ClCompile Include="src\types.cpp" />
+    <ClCompile Include="src\warrior.cpp" />
+    <ClCompile Include="src\weapon.cpp" />
+    <ClCompile Include="src\wizard.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
